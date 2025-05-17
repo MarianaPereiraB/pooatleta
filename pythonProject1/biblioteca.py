@@ -28,7 +28,7 @@ class Corredor(Atleta):
     def correr(self):
             if self.aposentado:
                 print(f"{self.nome} está aposentado e não pode mais correr")
-            elif not self.aquecido:
+            elif not self.aquecer:
                 print(f"{self.nome} precisa se aquecer para poder correr")
             else:
                 print(f"{self.nome} está correndo")
@@ -39,7 +39,7 @@ class Nadador(Atleta):
     def nadar(self):
         if self.aposentado:
             print(f"{self.nome} não pode nadar porque está aposentado")
-        elif not self.aquecido:
+        elif not self.aquecer:
             print(f"{self.nome} precisa se aquecer antes de nadar")
         else:
             print(f"{self.nome} está nadando")
@@ -50,7 +50,7 @@ class Ciclista(Atleta):
     def pedalar(self):
         if self.aposentado:
             print(f"{self.nome} não pode pedalar porque está aposentado")
-        elif not self.aquecido:
+        elif not self.aquecer:
             print(f"{self.nome} precisa se aquecer antes de pedalar.")
         else:
             print(f"{self.nome} está pedalando.")
@@ -61,7 +61,7 @@ class TriAtleta(Corredor, Nadador, Ciclista):
     def competir(self):
         if self.aposentado:
             print(f"{self.nome} não pode competir porque está aposentado.")
-        elif not self.aquecido:
+        elif not self.aquecer:
             print(f"{self.nome} precisa se aquecer antes de competir.")
         else:
             print(f"{self.nome} está competindo em um triatlo!")
