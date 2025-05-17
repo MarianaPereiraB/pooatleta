@@ -1,5 +1,6 @@
-class Atleta():
+class Atleta:
     def __init__(self, nome, idade, peso):
+
         self.nome=nome
         self.peso=peso
         self.idade=idade
@@ -9,13 +10,12 @@ class Atleta():
 
     def apresentar(self):
         print(f" Olá! Meu nome é {self.nome}, tenho {self.idade} anos.\n Hoje em dia estou acima do peso, pesando {self.peso} quilos e ando precisando me aquecer.")
-    def aposentar(self):
-        print(f"O atleta {self.nome} está {self.aposentado}")
+
     def aquecer(self):
       if self.aposentado:
           print(f"{self.nome} está aposentado(a) e não pode mais aquecer")
       else:
-          self.aquecido = True
+          self.aquecer = True
           print(f"{self.nome} está aquecido(a).")
     def aposentar(self):
         self.aposentado=True
